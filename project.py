@@ -245,6 +245,7 @@ occupation_df = process_occupation_data()
     ---------------------------'''
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.H1("Occupation Distribution in Canada", style={'textAlign': 'center', 'padding': '20px', 'marginBottom': '20px'}),
