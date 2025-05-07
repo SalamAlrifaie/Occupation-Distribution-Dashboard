@@ -1,5 +1,6 @@
 import dash
 from dash import dcc, html, Input, Output, callback
+import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -244,7 +245,7 @@ occupation_df = process_occupation_data()
      Dash App
     ---------------------------'''
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 app.layout = html.Div([
